@@ -7,12 +7,6 @@
     <meta name="author" content=" FILL ME IN ">
     <title>Cameron Pittman: Portfolio</title>
 
-    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-	
-
-	<link href="css/mob.css" rel="stylesheet" media="max-width: 480px">
-    <link href="css/print.css" rel="stylesheet" media="print">
-
     <script>
       (function(w,g){w['GoogleAnalyticsObject']=g;
       w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
@@ -67,8 +61,25 @@
 			  border-top: 1px solid #ccc;
 			}
 			footer span { float: right; font-style: italic; }
+			
+			<!-- Smartphones (portrait) -->
+			@media only screen and (max-width: 480px) {
+			  body { font-size: 12px;}
+			  header p { padding-left: 4.5em;}
+			}
+			
+			<!-- Print-->
+			@media print {
+			  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+			  a, a:visited { color: #444 !important; text-decoration: underline; }
+			  a[href]:after { content: " (" attr(href) ")"; }
+			  tr, img { page-break-inside: avoid; }
+			  img { max-width: 100% !important; }
+			  @page { margin: 0.5cm; }
+			  p, h2, h3 { orphans: 3; widows: 3; }
+			  h2, h3{ page-break-after: avoid; }
+			}
 	</style>
-
   </head>
 
   <body>
